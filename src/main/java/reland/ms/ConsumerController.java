@@ -55,7 +55,7 @@ public class ConsumerController {
 
     @GetMapping("/user/{id}")
     public User findById(@PathVariable Long id) {
-        System.out.println("abcdefg");
+        System.out.println("abcdefghigk");
         ConsumerController.LOGGER.info("consumer-sample findById Method");
         return this.restTemplate.getForObject("http://ms-provider-sample/" + id, User.class);
 //        return this.userFeignClient.findById(id);
