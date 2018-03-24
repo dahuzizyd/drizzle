@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 //@FeignClient(name="ms-provider-sample")
 public interface UserFeignClient {
-    @RequestMapping(value = "/{id}",method = RequestMethod.GET)
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public User findById(@PathVariable("id") Long id);
 }
