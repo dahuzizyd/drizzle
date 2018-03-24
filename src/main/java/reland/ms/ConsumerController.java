@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.Base64;
+import javax.xml.bind.SchemaOutputResolver;
 
 /**
  * Created by zhaoyd on 18/2/16.
@@ -55,6 +55,7 @@ public class ConsumerController {
 
     @GetMapping("/user/{id}")
     public User findById(@PathVariable Long id) {
+        System.out.println("abc");
         ConsumerController.LOGGER.info("consumer-sample findById Method");
         return this.restTemplate.getForObject("http://ms-provider-sample/" + id, User.class);
 //        return this.userFeignClient.findById(id);
