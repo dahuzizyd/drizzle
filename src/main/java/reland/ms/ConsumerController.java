@@ -4,8 +4,8 @@ import feign.Client;
 import feign.Contract;
 import feign.Feign;
 import feign.auth.BasicAuthRequestInterceptor;
-import feign.codec.Decoder;
-import feign.codec.Encoder;
+//import feign.codec.Decoder;
+//import feign.codec.Encoder;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import javax.xml.bind.SchemaOutputResolver;
+//import javax.xml.bind.SchemaOutputResolver;
 
 /**
  * Created by zhaoyd on 18/2/16.
@@ -55,7 +55,7 @@ public class ConsumerController {
 
     @GetMapping("/user/{id}")
     public User findById(@PathVariable Long id) {
-        System.out.println("abcdefghijk");
+        System.out.println("abcdefghijklmn");
         ConsumerController.LOGGER.info("consumer-sample findById Method");
         return this.restTemplate.getForObject("http://ms-provider-sample/" + id, User.class);
 //        return this.userFeignClient.findById(id);
